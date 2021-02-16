@@ -101,7 +101,7 @@
         <button type="button" class="btn btn-outline-primary" data-mdb-toggle="modal" data-mdb-target="#contactoModal">
           Escríbenos
         </button>
-        
+        <hr>
         {{-- boton me gusta de facebook --}}
         <div class = "fb-like" data-href = "https://persontechnology.com/" data-width = "" data-layout = "button_count" data-action = "like" data-size = "large" data-share = "true" > </div> 
 
