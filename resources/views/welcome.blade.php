@@ -102,7 +102,9 @@
           Escríbenos
         </button>
         
-          
+        {{-- boton me gusta de facebook --}}
+        <div class = "fb-like" data-href = "https://persontechnology.com/" data-width = "" data-layout = "box_count" data-action = "like" data-size = "small" data-share = "true" > </div>       
+
         </div>
       </div>
     </section>
