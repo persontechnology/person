@@ -104,7 +104,7 @@
         <hr>
         {{-- boton me gusta de facebook --}}
         <div class="fb-like" data-href="https://www.facebook.com/persontechnology" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="false"></div>
-
+        <div class="fb-share-button" data-href="https://persontechnology.com/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpersontechnology.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
         </div>
       </div>
     </section>
