@@ -58,7 +58,7 @@
   <body>
     
     {{-- facebook plugin --}}
-    <div id = "fb-root" > </div> <script async diferir crossorigin = "anonymous" src = "https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0&appId= 263449115173815 & autoLogAppEvents = 1 " nonce = " rfttCsfP " > </script> 
+    <div id = "fb-root" > </div> <script async diferir crossorigin = "anonymous" src = "https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0&appId= 263449115173815 & autoLogAppEvents = 1 " nonce = " jUQnkFWa " > </script>
     <header>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
