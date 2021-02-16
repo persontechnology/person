@@ -60,7 +60,6 @@
     {{-- facebook plugin --}}
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0&appId=263449115173815&autoLogAppEvents=1" nonce="6CQpzTM8"></script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0&appId=263449115173815&autoLogAppEvents=1" nonce="ovET0Zod"></script>
     <header>
       <!-- Navbar -->
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
