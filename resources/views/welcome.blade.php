@@ -103,7 +103,7 @@
         </button>
         <hr>
         {{-- boton me gusta de facebook --}}
-        <div class = "fb-like" data-href = "https://persontechnology.com/" data-width = "" data-layout = "button_count" data-action = "like" data-size = "large" data-share = "true" > </div> 
+        <div class = "fb-like" data-href = "https://www.facebook.com/persontechnology" data-width = "" data-layout = "standard" data-action = "like" data-size = "large" data-share = "false" > </div>   
 
         </div>
       </div>
