@@ -181,6 +181,8 @@
       </div>
     </section>
     <!--Section: Content-->
+    <hr class="my-4">
+    <div class="fb-page" data-href="https://www.facebook.com/persontechnology/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/persontechnology/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/persontechnology/">Person Technology</a></blockquote></div>
   </div>
 
 
@@ -302,4 +304,5 @@
       </div>
     </div>
   </div>
+
 @endsection
