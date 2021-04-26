@@ -27,7 +27,7 @@ Route::get('/{locale?}', function ($locale=null) {
     return view('welcome');
 });
 
-Route::get('/person', function () {
+Route::get('/limpiar-cache', function () {
     
     Artisan::call('cache:clear');
     Artisan::call('config:clear');
