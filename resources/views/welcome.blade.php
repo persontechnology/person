@@ -1,4 +1,4 @@
-@extends('estaticas.principal')
+@extends('layouts.app')
 
 @section('slider')
   <div id="carouselExampleIndicators" class="carousel slide carousel-fade my-5" data-mdb-ride="carousel">
@@ -201,7 +201,7 @@
 
 
 {{-- modal contactos --}}
-<livewire:estaticas.escribenos />
+@livewire('estaticas.escribenos')
 
   {{-- modal nosotros --}}
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"aria-hidden="true">
