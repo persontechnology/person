@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Estaticas;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Config;
 
 Route::get('/{locale?}', function ($locale=null) {
     
@@ -27,4 +26,16 @@ Route::get('/{locale?}', function ($locale=null) {
     }
     return view('welcome');
 });
+
+Route::get('/person', function () {
+    
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    // Artisan::call('storage:link');
+    // Artisan::call('key:generate');
+    // Artisan::call('migrate:fresh --seed');
+});
+
+
 
