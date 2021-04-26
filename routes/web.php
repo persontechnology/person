@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/limpiar-cache', function () {
+    
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    // Artisan::call('storage:link');
+    // Artisan::call('key:generate');
+    // Artisan::call('migrate:fresh --seed');
+});
 
 Route::get('/{locale?}', function ($locale=null) {
     
@@ -27,15 +36,7 @@ Route::get('/{locale?}', function ($locale=null) {
     return view('welcome');
 });
 
-Route::get('/limpiar-cache', function () {
-    
-    Artisan::call('cache:clear');
-    Artisan::call('config:clear');
-    Artisan::call('config:cache');
-    // Artisan::call('storage:link');
-    // Artisan::call('key:generate');
-    // Artisan::call('migrate:fresh --seed');
-});
+
 
 
 
