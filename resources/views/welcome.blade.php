@@ -201,7 +201,7 @@
 
 
 {{-- modal contactos --}}
-@livewire('estaticas.escribenos')
+<livewire:estaticas.escribenos />
 
   {{-- modal nosotros --}}
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"aria-hidden="true">
