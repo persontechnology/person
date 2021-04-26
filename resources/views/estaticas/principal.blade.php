@@ -46,13 +46,14 @@
 
 
     <title>{{ config('app.name','PERSON TECHNOLOGY') }}</title>
-    @livewireStyles
+    
     <link rel="icon" href="{{ asset('img/icon.png') }}" type="image/png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="{{ mix('js/api.js') }}" defer></script>
  
+    <livewire:styles />
   </head>
   <body>
     
@@ -207,7 +208,7 @@
     {{-- Custom scripts --}}
   
 
-  @livewireScripts
+    
 
   <script>
     window.livewire.on('alert', param => {
@@ -251,5 +252,7 @@
           return template.content.firstChild;
       }
   </script>
+
+  <livewire:scripts />
   </body>
 </html>
