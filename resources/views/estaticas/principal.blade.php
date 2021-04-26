@@ -53,7 +53,7 @@
     <script src="{{ mix('js/app.js') }}" defer></script>
     <script src="{{ mix('js/api.js') }}" defer></script>
  
-    <livewire:styles />
+     @livewireStyles
   </head>
   <body>
     
@@ -253,6 +253,6 @@
       }
   </script>
 
-  <livewire:scripts />
+  @livewireScripts
   </body>
 </html>
