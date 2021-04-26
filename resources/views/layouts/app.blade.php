@@ -50,8 +50,7 @@
     <link rel="icon" href="{{ asset('img/icon.png') }}" type="image/png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <script src="{{ mix('js/app.js') }}"></script>
-    <script src="{{ mix('js/api.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}" defer></script>
  
      @livewireStyles
   </head>
