@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" prefix="og: https://ogp.me/ns#">
-  <head profile="http://dublincore.org/documents/2008/08/04/dc-html/">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
@@ -46,22 +46,26 @@
 
 
     <title>{{ config('app.name','PERSON TECHNOLOGY') }}</title>
-    <!-- MDB icon -->
+    @livewireStyles
     <link rel="icon" href="{{ asset('img/icon.png') }}" type="image/png" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
-    <!-- Google Fonts Roboto -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
-    <!-- MDB -->
-    <link rel="stylesheet" href="{{ asset('mdb/css/mdb.min.css') }}" />
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <script src="{{ mix('js/app.js') }}" defer></script>
+    <script src="{{ mix('js/api.js') }}" defer></script>
+ 
   </head>
   <body>
     
     {{-- facebook plugin --}}
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0&appId=263449115173815&autoLogAppEvents=1" nonce="6CQpzTM8"></script>
+    @if (Config::get('app.locale')=='es')
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v9.0&appId=263449115173815&autoLogAppEvents=1" nonce="6CQpzTM8"></script>    
+    @else
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=263449115173815&autoLogAppEvents=1" nonce="6CQpzTM8"></script>
+    @endif
+    
     <header>
-      <!-- Navbar -->
+      {{-- Navbar --}}
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
           <button
@@ -110,6 +114,41 @@
 
             <ul class="navbar-nav d-flex flex-row">
               <!-- Icons -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-mdb-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                @if ( Config::get('app.locale') == 'en')
+                  <i class="united kingdom flag m-0"></i>
+                @else
+                <i class="ecuador flag m-0"></i>
+                @endif
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="{{ url('/es') }}">
+                      <i class="ecuador flag"></i>Español
+                      @if ( Config::get('app.locale') == 'es')
+                      <i class="fa fa-check text-success ms-2"></i>
+                      @endif
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="{{ url('/en') }}">
+                      <i class="united kingdom flag"></i>English
+                      @if ( Config::get('app.locale') == 'en')
+                      <i class="fa fa-check text-success ms-2"></i>
+                      @endif
+                    </a>
+                  </li>
+                  
+                </ul>
+              </li>
               <li class="nav-item me-3 me-lg-0">
                 <a class="nav-link" href="https://www.youtube.com/channel/UCTQWC6Ms6a2G0GLNQHcjWtg" rel="nofollow"
                   target="_blank">
@@ -136,52 +175,81 @@
           </div>
         </div>
       </nav>
-      <!-- Navbar -->
+      {{-- Navbar --}}
     </header>
 
     {{-- slider --}}
         @yield('slider')
     {{-- end slider --}}
 
-     <!--Main layout-->
+     {{-- Main layout --}}
     <main class="mt-5">
         @yield('contenido')
     </main>
-    <!--Main layout-->
+    {{-- Main layout --}}
     
+    
+    {{-- liveToast --}}
+    <div id="toast-container" class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+      
+    </div>
     
     
     <footer class="bg-light text-center text-lg-start">
-      <!-- Copyright -->
+      {{-- Copyright --}}
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         © {{ date('Y') }} Copyright:
         <a class="text-dark" href="{{ url('/') }}">persontechnology</a>
       </div>
-      <!-- Copyright -->
+      {{-- Copyright --}}
     </footer>
 
+    {{-- Custom scripts --}}
+  
 
+  @livewireScripts
 
-    <!-- MDB -->
-    <script type="text/javascript" src="{{ asset('mdb/js/mdb.min.js') }}"></script>
-    <!-- Custom scripts -->
-    <script type="text/javascript">
+  <script>
+    window.livewire.on('alert', param => {
+        alerta(param[0],param[1]);
+    });
 
+    window.livewire.on('cerrarModal', param => {
+      $('#'.param).modal('hide')
+      console.log('ok')
+    });
 
-    //  mostrara modal error contacto
-    @if ($errors->any())
-   
-      const myModalEl = document.getElementById('contactoModal')
-      const modal = new mdb.Modal(myModalEl)
-      modal.show()
-   
-    @endif
-    
-    </script>
-      
-    
-      
-    
+    function alerta(color,toastBody){
+      var toastConainerElement = document.getElementById("toast-container");
+      toastConainerElement.innerHTML="";
+        var html = 
 
+      `<div id="liveToast" class="toast align-items-center text-white bg-${color} border-0 mb-1" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+            ${toastBody}
+          </div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>`;
+
+        var toastElement = htmlToElement(html);
+        
+        toastConainerElement.appendChild(toastElement);       
+        var toast = new bootstrap.Toast(toastElement, {delay:3000, animation:true}); 
+        toast.show();
+
+        var myAlert =document.getElementById('liveToast');//select id of toast
+        var bsAlert = new bootstrap.Toast(myAlert);//inizialize it
+        bsAlert.show();//show it
+    }
+
+    function htmlToElement(html) {
+          var template = document.createElement('template');
+          html = html.trim(); // Never return a text node of whitespace as the result
+          template.innerHTML = html;
+          return template.content.firstChild;
+      }
+  </script>
   </body>
 </html>

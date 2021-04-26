@@ -1,4 +1,5 @@
 @extends('estaticas.principal')
+
 @section('slider')
   <div id="carouselExampleIndicators" class="carousel slide carousel-fade my-5" data-mdb-ride="carousel">
     <ol class="carousel-indicators">
@@ -64,7 +65,7 @@
 
 @section('contenido')
   <div class="container">
-    <!--Section: Content-->
+    {{-- nosotros --}}
     <section>
       @if(Session::has('mensajeContacto'))
       <div class="alert alert-primary" role="alert">
@@ -86,34 +87,42 @@
         </div>
 
         <div class="col-md-6 gx-5 mb-4">
-          <h4><strong>Ciencia, tecnología e ingeniería</strong></h4>
+          <h4><strong>{{ __('Ciencia, Tecnología e Ingeniería') }}</strong></h4>
           <p class="text-muted">
-            Somos una empresa ecuatoriana que diseña y produce equipos electrónicos, software y servicios en línea.
+            {{ __('Somos una empresa ecuatoriana que diseña y produce equipos electrónicos, software y servicios en línea.') }}
           </p>
-          <p><strong>Hablemos de tu proyecto atención 24/7</strong></p>
+          <p>
+            <strong>
+            {{ __('Hablemos de tu proyecto atención 24/7') }}
+          </strong>
+          </p>
           <p class="text-muted">
-            Utilizamos tecnologías, lenguajes de programación y frameworks de alto rendimiento para construir de manera rápida y eficiente las más innovadoras soluciones para el mundo y nuestros clientes.
+            {{ __('Utilizamos tecnologías, lenguajes de programación y frameworks de alto rendimiento para construir de manera rápida y eficiente las más innovadoras soluciones para el mundo y nuestros clientes.') }}
           </p>
 
         <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-          Acerca de nosotros
+          {{ __('Acerca de nosotros') }}
         </button>
-        <button type="button" class="btn btn-outline-primary" data-mdb-toggle="modal" data-mdb-target="#contactoModal">
-          Escríbenos
+        <button type="button" class="btn btn-outline-primary" data-mdb-toggle="modal" data-mdb-target="#modalEscribenos">
+          {{ __('Escríbenos') }}
         </button>
         <hr>
         {{-- boton compartir de facebook --}}
-        <div class="fb-share-button" data-href="https://persontechnology.com/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpersontechnology.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartir</a></div>
+        <div class="fb-share-button" data-href="https://persontechnology.com/" data-layout="button" data-size="large">
+          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpersontechnology.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+            {{ __('Compartir') }}
+          </a>
+        </div>
         </div>
       </div>
     </section>
-    <!--Section: Content-->
+    {{-- nosotros --}}
 
     <hr class="my-5" />
 
-    <!--Section: Content-->
+    {{-- servicios --}}
     <section class="text-center">
-      <h4 class="mb-5"><strong>Nuestros servicios</strong></h4>
+      <h4 class="mb-5"><strong>{{ __('Nuestros servicios') }}</strong></h4>
 
       <div class="row">
         <div class="col-lg-4 col-md-12 mb-4">
@@ -128,9 +137,11 @@
               </a>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Diseño y fabricación de productos electrónicos</h5>
+              <h5 class="card-title">
+                {{ __('Diseño y fabricación de productos electrónicos') }}
+              </h5>
               <p class="card-text">
-                Somos especialistas en diseño y fabricación de soluciones electrónicas para empresas, desde circuitos impresos hasta productos completos a medida, incorporando elementos electrónicos y electromecánicos, aportando siempre una visión innovadora, de calidad y orientada a mejorar la eficiencia y los resultados.
+                {{ __('Somos especialistas en diseño y fabricación de soluciones electrónicas para empresas, desde circuitos impresos hasta productos completos a medida, incorporando elementos electrónicos y electromecánicos, aportando siempre una visión innovadora, de calidad y orientada a mejorar la eficiencia y los resultados.') }}
               </p>
               
             </div>
@@ -149,9 +160,11 @@
               </a>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Desarrollo de software</h5>
+              <h5 class="card-title">
+                {{ __('Desarrollo de software') }}
+              </h5>
               <p class="card-text text-justify">
-                Desarrollamos software a medida. Abarcamos todo el proceso que va desde la fase de consultoría previa (estudio estratégico del proyecto) al mantenimiento evolutivo del sistema pasando por el diseño y la arquitectura, el desarrollo, la fase de pruebas, control de calidad, puesta en marcha y el soporte. Es decir, realizamos el ciclo completo de un desarrollo de software. 
+                {{ __('Desarrollamos software a medida. Abarcamos todo el proceso que va desde la fase de consultoría previa (estudio estratégico del proyecto) al mantenimiento evolutivo del sistema pasando por el diseño y la arquitectura, el desarrollo, la fase de pruebas, control de calidad, puesta en marcha y el soporte. Es decir, realizamos el ciclo completo de un desarrollo de software.') }}
               </p>
               
             </div>
@@ -170,9 +183,11 @@
               </a>
             </div>
             <div class="card-body">
-              <h5 class="card-title">Servicios en línea</h5>
+              <h5 class="card-title">
+                {{ __('Servicios en línea') }}
+              </h5>
               <p class="card-text">
-                Los servicios en línea van de simples a complejos. Un servicio en línea simple podría ser tan básico como proveer información a investigadores. Un servicio en línea complejo podría ser una aplicación para solicitar ayuda financiera en línea. Los servicios en línea incluyen servicios de correo electrónico, sitios web de música o películas, motores de búsqueda o tiendas en línea.
+                {{ __('Los servicios en línea van de simples a complejos. Un servicio en línea simple podría ser tan básico como proveer información a investigadores. Un servicio en línea complejo podría ser una aplicación para solicitar ayuda financiera en línea. Los servicios en línea incluyen servicios de correo electrónico, sitios web de música o películas, motores de búsqueda o tiendas en línea.') }}
               </p>
               
             </div>
@@ -180,76 +195,13 @@
         </div>
       </div>
     </section>
-    <!--Section: Content-->
+    {{-- servicios --}}
   </div>
 
 
 
 {{-- modal contactos --}}
-
-  <div class="modal fade" id="contactoModal" tabindex="-1" aria-labelledby="contactoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="contactoModalLabel">Escríbenos</h5>
-          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="card border border-light shadow-0 mb-3">
-              <p>Nuestro equipo regresará a usted en cuestión de horas para ayudarlo.</p>
-            <div class="card-body">
-              <form method="POST" action="{{ route('enviarContacto') }}">
-                @csrf
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example1" value="{{ old('nombres') }}" name="nombres" class="form-control @error('nombres')
-                  is-invalid
-                  @enderror " required />
-                  <label class="form-label" for="form3Example1">Nombres y apellidos</label>
-                  @error('nombres')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                  @enderror
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="email" id="form3Example2" name="correo" value="{{ old('correo') }}"  class="form-control @error('correo') is-invalid @enderror " required />
-                  <label class="form-label" for="form3Example2">Correo electrónico</label>
-                  @error('correo')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                  @enderror
-                </div>
-    
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example3" value="{{ old('asunto') }}" name="asunto" class="form-control @error('asunto') is-invalid @enderror" required />
-                  <label class="form-label" for="form3Example3">Asunto</label>
-                  @error('asunto')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                  @enderror
-                </div>
-    
-                <div class="form-outline mb-4">
-                  <textarea class="form-control @error('mensaje') is-invalid @enderror"  name="mensaje" id="textAreaExample" rows="4" required>{{ old('mensaje') }}</textarea>
-                  <label class="form-label" for="textAreaExample">Su mensaje</label>
-                  @error('mensaje')
-                    <div class="invalid-feedback">{{ $message }}</div>
-                  @enderror
-                </div>
-    
-                <button type="submit" class="btn btn-primary btn-block mb-4">
-                  Enviar
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-        
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark" data-mdb-dismiss="modal">
-            Cerrar
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+@livewire('estaticas.escribenos')
 
   {{-- modal nosotros --}}
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"aria-hidden="true">
@@ -262,32 +214,40 @@
         <div class="modal-body">
           <div class="card border border-light shadow-0 mb-3">
             <div class="card-body">
-              <h5 class="card-title">Nosotros</h5>
+              <h5 class="card-title">{{ __('Acerca de nosotros') }}</h5>
               <p class="card-text">
-                Somos una empresa ecuatoriana que diseña y produce productos electrónicos, software y servicios en línea.
+                {{ __('Somos una empresa ecuatoriana que diseña y produce equipos electrónicos, software y servicios en línea.') }}
               </p>
-              <h5 class="card-title">Objetivo</h5>
+              <h5 class="card-title">
+                {{ __('Objetivo') }}
+              </h5>
               <p class="card-text">
-                Diseñar y desarrollar productos electrónicos, software y servicios en línea para brindar acceso y disponibilidad a todas las personas del mundo.
+                {{ __('Diseñar y desarrollar productos electrónicos, software y servicios en línea para brindar acceso y disponibilidad a todas las personas del mundo.') }}
               </p>
-              <h5 class="card-title">Misión</h5>
+              <h5 class="card-title">
+                {{ __('Misión') }}
+              </h5>
               <p class="card-text">
-                Nuestra misión es lograr que la mayor cantidad de personas tengan acceso a la tecnología y puedan implementarla en su hogar o empresa.
+                {{ __('Nuestra misión es lograr que la mayor cantidad de personas tengan acceso a la tecnología y puedan implementarla en su hogar o empresa.') }}
               </p>
-              <h5 class="card-title">Visión</h5>
+              <h5 class="card-title">
+                {{ __('Visión') }}
+              </h5>
               <p class="card-text">
-                Mejorar la calidad de vida de las personas, a través de la innovación tecnológica, para lograr ser reconocidos como la empresa ecuatoriana líder en tecnologías.
+                {{ __('Mejorar la calidad de vida de las personas, a través de la innovación tecnológica, para lograr ser reconocidos como la empresa ecuatoriana líder en tecnologías.') }}
               </p>
-              <h5 class="card-title">Valores</h5>
+              <h5 class="card-title">
+                {{ __('Valores') }}
+              </h5>
               <p class="card-text">
                 <ul>
-                  <li>Humildad</li>
-                  <li>Lealtad</li>
-                  <li>Responsabilidad</li>
-                  <li>Pasión</li>
-                  <li>Trabajo en equipo</li>
-                  <li>Colaboración</li>
-                  <li>Equidad</li>
+                  <li>{{ __('Humildad') }}</li>
+                  <li>{{ __('Lealtad') }}</li>
+                  <li>{{ __('Responsabilidad') }}</li>
+                  <li>{{ __('Pasión') }}</li>
+                  <li>{{ __('Trabajo en equipo') }}</li>
+                  <li>{{ __('Colaboración') }}</li>
+                  <li>{{ __('Equidad') }}</li>
                 </ul>
               </p>
             </div>
@@ -296,7 +256,7 @@
         
         <div class="modal-footer">
           <button type="button" class="btn btn-outline-dark" data-mdb-dismiss="modal">
-            Cerrar
+            {{ __('Cerrar') }}
           </button>
         </div>
       </div>
@@ -315,10 +275,16 @@
     };
 
     (function(d, s, id) {
+      var myurl;
+      @if (Config::get('app.locale')=='es')
+        myurl='https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+      @else
+        myurl='https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js'
+      @endif
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+    js.src = myurl;
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
@@ -327,7 +293,7 @@
     attribution="setup_tool"
     page_id="707887712735256"
     theme_color="#0084ff"
-    logged_in_greeting=" ¡Hola! como podemos ayudarte?"
-    logged_out_greeting=" ¡Hola! como podemos ayudarte?">
+    logged_in_greeting=" {{ __('¡Hola! como podemos ayudarte?') }}"
+    logged_out_greeting=" {{ __('¡Hola! como podemos ayudarte?') }}">
   </div>
 @endsection

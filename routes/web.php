@@ -13,9 +13,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Config;
 
-Route::get('/', function () {
+Route::get('/{locale?}', function ($locale=null) {
+    
+    if($locale!=null){
+        if(in_array($locale,['es','en'])){
+            session(['my_locale' => $locale]);
+            return redirect()->back();
+        }
+        
+    }
     return view('welcome');
 });
 
-Route::post('/enviar-contacto', [Estaticas::class,'enviarcontacto'])->name('enviarContacto');
