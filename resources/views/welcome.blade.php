@@ -15,28 +15,28 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img
-          src="{{ asset('img/slider/1.png') }}"
+          src="{{ asset('img/slider/1.jpg') }}"
           class="d-block w-100"
           alt="..."
         />
       </div>
       <div class="carousel-item">
         <img
-          src="{{ asset('img/slider/2.png') }}"
+          src="{{ asset('img/slider/2.jpg') }}"
           class="d-block w-100"
           alt="..."
         />
       </div>
       <div class="carousel-item">
         <img
-          src="{{ asset('img/slider/3.png') }}"
+          src="{{ asset('img/slider/3.jpg') }}"
           class="d-block w-100"
           alt="..."
         />
       </div>
       <div class="carousel-item">
         <img
-          src="{{ asset('img/slider/4.png') }}"
+          src="{{ asset('img/slider/4.jpg') }}"
           class="d-block w-100"
           alt="..."
         />
