@@ -1,6 +1,10 @@
 @extends('layouts.app')
 
 @section('slider')
+
+<style>
+
+</style>
   <div id="carouselExampleIndicators" class="carousel slide carousel-fade my-5" data-mdb-ride="carousel">
     <ol class="carousel-indicators">
       <li
@@ -13,19 +17,41 @@
       <li data-mdb-target="#carouselExampleIndicators" data-mdb-slide-to="3"></li>
     </ol>
     <div class="carousel-inner">
+
       <div class="carousel-item active">
         <img
           src="{{ asset('img/slider/1.jpeg') }}"
           class="d-block w-100"
           alt="..."
         />
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white text-justify">
+              <h1 class="my-0">
+                PERSON<sup><small>&reg;</small></sup>
+              </h1>
+              <h4 class="my-0">
+                TECHNOLOGY
+              </h4>
+              
+            </div>
+          </div>
+        </div>
       </div>
+
       <div class="carousel-item">
         <img
           src="{{ asset('img/slider/2.jpeg') }}"
           class="d-block w-100"
           alt="..."
         />
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white text-center">
+              <h1 class="mb-3">{{ __('Ciencia') }}</h1>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="carousel-item">
         <img
@@ -33,6 +59,13 @@
           class="d-block w-100"
           alt="..."
         />
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white text-center">
+              <h1 class="mb-3">{{ __('Tecnología') }}</h1>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="carousel-item">
         <img
@@ -40,7 +73,15 @@
           class="d-block w-100"
           alt="..."
         />
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white text-center">
+              <h1 class="mb-3">{{ __('e Ingeniería') }}</h1>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
     <a
       class="carousel-control-prev"

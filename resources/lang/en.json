@@ -35,6 +35,8 @@
     "Asunto":"Subject",
     "Su mensaje":"Your message",
     "Enviar":"Send",
-    "Te da la bienvenida y gracias por escribirnos. Intentaremos responderte lo antes posible.":"You are welcomed and thank you for writing to us. We will answer as soon as possible."
-
+    "Te da la bienvenida y gracias por escribirnos. Intentaremos responderte lo antes posible.":"You are welcomed and thank you for writing to us. We will answer as soon as possible.",
+    "Ciencia":"Science",
+    "Tecnología":"Technology",
+    "e Ingeniería":"and Engineering"
 }
