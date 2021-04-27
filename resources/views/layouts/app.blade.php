@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-    <meta name="description" content="Somos una empresa ecuatoriana que diseña y produce equipos electrónicos, software y servicios en línea.">
-    <meta name="keywords" content="Ciencia, 
-    Tecnología, 
-    Ingeniería, 
+    <meta name="description" content="{{ __('Somos una empresa ecuatoriana que diseña y produce equipos electrónicos, software y servicios en línea.') }}">
+    <meta name="keywords" content="{{ ___('Ciencia, Tecnología e Ingeniería') }},
     Desarrollo de software, 
     Desarrollo de software en Ecuador-Cotopaxi-Salcedo,
     Diseño de páginas web en Ecuador-Cotopaxi-Salcedo,
@@ -27,22 +25,22 @@
 
     <meta name="author" content="Person Technology">
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Ciencia, tecnología e ingeniería" />
-    <meta property="og:description" content="Somos una empresa ecuatoriana que diseña y produce equipos electrónicos, software y servicios en línea." />
+    <meta property="og:title" content="{{ __('Ciencia, Tecnología e Ingeniería') }}" />
+    <meta property="og:description" content="{{ __('Somos una empresa ecuatoriana que diseña y produce equipos electrónicos, software y servicios en línea.') }}" />
     <meta property="og:image" content="{{ asset('img/persontechnology.png') }}" />
     <meta property="og:image:width" content="1080" />
     <meta property="og:image:height" content="1080" />
     <meta property="og:url" content="{{ url('/') }}" />
     <meta property="og:site_name" content="{{ config('app.name','PERSON TECHNOLOGY') }}" />
     <meta property="fb:app_id" content="263449115173815" />
-    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale" content="{{ str_replace('_', '-', app()->getLocale()) }}" />
     <meta property="og:video" content="https://youtu.be/333pv9r9myQ" />
     <meta property="og:video:type" content="application/x-shockwave-flash" />
 
     <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
-    <meta name="DC.Title" content="Ciencia, tecnología e ingeniería">
+    <meta name="DC.Title" content="{{ __('Ciencia, Tecnología e Ingeniería') }}">
     <meta name="DC.Creator" content="Person Technology">
-    <meta name="DC.Description" content="Somos una empresa ecuatoriana que diseña y produce equipos electrónicos, software y servicios en línea.">
+    <meta name="DC.Description" content="{{ __('Somos una empresa ecuatoriana que diseña y produce equipos electrónicos, software y servicios en línea.') }}">
 
 
     <title>{{ config('app.name','PERSON TECHNOLOGY') }}</title>
