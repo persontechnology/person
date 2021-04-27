@@ -208,7 +208,7 @@
   
 
     
-
+    @livewireScripts
   <script>
     window.livewire.on('alert', param => {
         alerta(param[0],param[1]);
@@ -252,6 +252,6 @@
       }
   </script>
 
-  @livewireScripts
+  
   </body>
 </html>
