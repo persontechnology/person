@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
     <meta name="description" content="{{ __('Somos una empresa ecuatoriana que diseña y produce equipos electrónicos, software y servicios en línea.') }}">
-    <meta name="keywords" content="{{ ___('Ciencia, Tecnología e Ingeniería') }},
+    <meta name="keywords" content="{{ __('Ciencia, Tecnología e Ingeniería') }},
     Desarrollo de software, 
     Desarrollo de software en Ecuador-Cotopaxi-Salcedo,
     Diseño de páginas web en Ecuador-Cotopaxi-Salcedo,
