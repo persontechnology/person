@@ -337,4 +337,6 @@
     logged_in_greeting=" {{ __('¡Hola! como podemos ayudarte?') }}"
     logged_out_greeting=" {{ __('¡Hola! como podemos ayudarte?') }}">
   </div>
+
+
 @endsection

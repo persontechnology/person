@@ -12,7 +12,7 @@ class Escribenos extends Component
     public $correo;
     public $asunto;
     public $mensaje;
-    public $msg;
+
 
     public function render()
     {
@@ -43,7 +43,6 @@ class Escribenos extends Component
         $user->notify(new EnviarContacto($validatedData));
         $this->emit('alert', ['success',$smj]);
         $this->emit('cerrarModal','modalEscribenos');
-        $this->msg=$smj;
         $this->vaciar();
     }
 

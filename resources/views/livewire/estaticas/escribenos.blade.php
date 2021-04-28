@@ -1,11 +1,12 @@
-<div
+<form wire:submit.prevent="enviar">
+  <div
     wire:ignore.self
-  class="modal fade"
-  id="modalEscribenos"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
+    class="modal fade"
+    id="modalEscribenos"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
   <div class="modal-dialog modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
@@ -22,7 +23,7 @@
       <div class="modal-body">
         {{ __('Nuestro equipo regresará a usted en cuestión de horas para ayudarlo.') }}
         <hr>
-        <form wire:submit.prevent="enviar">
+        
           <div class="mb-4">
               <label class="form-label" for="nombresapellidos">
                   {{ __('Nombres y apellidos') }}
@@ -71,22 +72,28 @@
             @enderror
           </div>
 
-          <button type="submit" class="btn btn-primary btn-block mb-4">
-            {{ __('Enviar') }}
-          </button>
-          <small class="text-success">{{ $msg }}</small>
-        </form>
+          
+          
+        
       </div>
       <div class="modal-footer">
-        
+        <button type="submit" class="btn btn-primary">
+          <span
+          wire:loading wire:target="enviar"
+          class="spinner-border spinner-border-sm"
+          role="status"
+          aria-hidden="true"
+        ></span>
+          {{ __('Enviar') }}
+        </button>
         <button type="button"  data-mdb-dismiss="modal" class="btn btn-secondary" >
             {{ __('Cerrar') }}
         </button>
-        
         
       </div>
     </div>
   </div>
 </div>
+</form>
 
 
