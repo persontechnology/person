@@ -80,10 +80,10 @@
           <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name','PERSON TECHNOLOGY') }}</a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              {{-- <li class="nav-item active">
-                <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Inicio</a>
+              <li class="nav-item {{ request()->routeIs('inicio')?'active':'' }}">
+                <a class="nav-link {{ request()->routeIs('inicio')?'active':'' }}" aria-current="page" href="{{ url('/') }}">Inicio</a>
               </li>
-              <li class="nav-item dropdown">
+              {{-- <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -104,10 +104,10 @@
                     <a class="dropdown-item" href="#">Servicios en línea</a>
                   </li>
                 </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://mdbootstrap.com/docs/standard/" target="_blank">Contactos</a>
               </li> --}}
+              <li class="nav-item {{ request()->routeIs('odoo')?'active':'' }}">
+                <a class="nav-link {{ request()->routeIs('odoo')?'active':'' }}" href="{{ route('odoo') }}">Odoo</a>
+              </li>
             </ul>
 
             <ul class="navbar-nav d-flex flex-row">

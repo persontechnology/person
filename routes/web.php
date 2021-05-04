@@ -24,6 +24,9 @@ Route::get('/limpiar-cache', function () {
     // Artisan::call('key:generate');
     // Artisan::call('migrate:fresh --seed');
 });
+Route::get('/odoo-crm', function ($locale=null) {
+    return view('info.odoo');
+})->name('odoo');
 
 Route::get('/{locale?}', function ($locale=null) {
     
@@ -35,7 +38,8 @@ Route::get('/{locale?}', function ($locale=null) {
         
     }
     return view('welcome');
-});
+})->name('inicio');
+
 
 
 
