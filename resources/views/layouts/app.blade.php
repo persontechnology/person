@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-
+    <meta name="facebook-domain-verification" content="btondjgzzzprclk1o89vvqchif9pct" />
     <meta name="description" content="{{ __('Somos una empresa ecuatoriana que diseña y produce equipos electrónicos, software y servicios en línea.') }}">
     <meta name="keywords" content="{{ __('Ciencia, Tecnología e Ingeniería') }},
     Desarrollo de software, 
@@ -105,6 +105,9 @@
               </li>
               <li class="nav-item {{ request()->routeIs('clientes')?'active':'' }}">
                 <a class="nav-link {{ request()->routeIs('clientes')?'active':'' }}" aria-current="page" href="{{ route('clientes') }}">{{ __('Nuestros clientes') }}</a>
+              </li>
+              <li class="nav-item {{ request()->routeIs('contactenos')?'active':'' }}">
+                <a class="nav-link {{ request()->routeIs('contactenos')?'active':'' }}" aria-current="page" href="{{ route('contactenos') }}">{{ __('Contáctenos') }}</a>
               </li>
             </ul>
 

@@ -26,9 +26,11 @@ Route::get('/odoo-crm', function ($locale=null) {
     return view('info.odoo');
 })->name('odoo');
 Route::get('/nuestros-clientes', function ($locale=null) {
-    
     return view('info.clientes');
 })->name('clientes');
+Route::get('/contactenos', function ($locale=null) {
+    return view('info.contactenos');
+})->name('contactenos');
 
 Route::get('/{locale?}', function ($locale=null) {
     
