@@ -1,6 +1,4 @@
 <?php
-
-use App\Http\Controllers\Estaticas;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +25,10 @@ Route::get('/limpiar-cache', function () {
 Route::get('/odoo-crm', function ($locale=null) {
     return view('info.odoo');
 })->name('odoo');
+Route::get('/nuestros-clientes', function ($locale=null) {
+    
+    return view('info.clientes');
+})->name('clientes');
 
 Route::get('/{locale?}', function ($locale=null) {
     

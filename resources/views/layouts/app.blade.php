@@ -49,18 +49,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <script src="{{ mix('js/app.js') }}" defer></script>
+    
  
      @livewireStyles
   </head>
   <body>
     
-    {{-- facebook plugin --}}
-    <div id="fb-root"></div>
-    @if (Config::get('app.locale')=='es')
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v9.0&appId=263449115173815&autoLogAppEvents=1" nonce="6CQpzTM8"></script>    
-    @else
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0&appId=263449115173815&autoLogAppEvents=1" nonce="6CQpzTM8"></script>
-    @endif
+    
     
     <header>
       {{-- Navbar --}}
@@ -107,6 +102,9 @@
               </li> --}}
               <li class="nav-item {{ request()->routeIs('odoo')?'active':'' }}">
                 <a class="nav-link {{ request()->routeIs('odoo')?'active':'' }}" href="{{ route('odoo') }}">Odoo</a>
+              </li>
+              <li class="nav-item {{ request()->routeIs('clientes')?'active':'' }}">
+                <a class="nav-link {{ request()->routeIs('clientes')?'active':'' }}" aria-current="page" href="{{ route('clientes') }}">{{ __('Nuestros clientes') }}</a>
               </li>
             </ul>
 

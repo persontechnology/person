@@ -1,5 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/jquery-modal-video.min.js": "/js/jquery-modal-video.min.js",
     "/js/api.js": "/js/api.js",
     "/css/app.css": "/css/app.css"
 }
