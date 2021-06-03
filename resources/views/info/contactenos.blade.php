@@ -8,8 +8,8 @@
     <section>
   
       <div class="text-center">
-        <h3 class="mb-3">Contact us</h3>
-        <p>We will reply to your message as soon as possible. The average response time is 24h.</p>
+        <h3 class="mb-3">{{ __('Contacta con nosotros') }}</h3>
+        <p>{{ __('Responderemos a su mensaje lo antes posible. El tiempo medio de respuesta es de 24 h.') }}</p>
       </div>
   
       <hr class="my-4">
@@ -36,50 +36,61 @@
   
           <!--Google map-->
           <div class="map-container shadow-1-strong rounded mb-4">
-            <iframe src="https://maps.google.com/maps?q=manhatan&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" style="border: 0; border-radius: .25rem;" allowfullscreen=""></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.148909821363!2d-78.58967898523885!3d-1.0495748357098122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d47cb88b2576db%3A0x4df497e4f888b608!2sSOYSOFTWARE!5e0!3m2!1ses!2sec!4v1622681227133!5m2!1ses!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
           <!--Google Maps-->
   
-          <p><strong>Address: </strong>New York, 94126, United States</p>
-          <p><strong>Phone number: </strong>+ 01 234 567 89</p>
-          <p><strong>E-mail: </strong>info@gmail.com</p>
+          <p><strong>{{ __('Dirección') }}:  </strong>SAN MIGUEL DE SALCEDO, COTOPAXI, ECUADOR</p>
+          <p><strong>{{ __('Número de teléfono') }}:  </strong>+593 998808775</p>
+          <p><strong>E-mail: </strong>info@persontechnology.com</p>
   
         </div>
   
         <div class="col-md-5 mb-4">
-  
-          <form>
-            <!-- Name input -->
-            <div class="form-outline mb-4">
-              <input type="text" id="form4Example1" class="form-control">
-              <label class="form-label" for="form4Example1">Name</label>
-            </div>
-  
-            <!-- Email input -->
-            <div class="form-outline mb-4">
-              <input type="email" id="form4Example2" class="form-control">
-              <label class="form-label" for="form4Example2">Email address</label>
-            </div>
-  
-            <!-- Message input -->
-            <div class="form-outline mb-4">
-              <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-              <label class="form-label" for="form4Example3">Message</label>
-            </div>
-  
-            <!-- Checkbox -->
-            <div class="form-check d-flex justify-content-center mb-4">
-              <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked="">
-              <label class="form-check-label" for="form4Example4">
-                Send me a copy of this message
-              </label>
-            </div>
-  
-            <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block">
-              Send
+        
+            <button type="button" class="btn btn-primary btn-block" data-mdb-toggle="modal" data-mdb-target="#modalEscribenos">
+                {{ __('Escríbenos') }}
             </button>
-          </form>
+             <!-- Whatsapp -->
+             <a class="btn btn-primary btn-block" style="background-color: #25d366;" href="https://wa.me/message/P6E77NRUVOC3A1" role="button"
+             ><i class="fab fa-whatsapp"></i
+             ></a>
+            <hr>
+            <p>{{ __('Siguenos en nuestras redes sociales') }}</p>
+            <!-- Facebook -->
+            <a class="btn btn-primary btn-block" style="background-color: #3b5998;" href="https://www.facebook.com/persontechnology" role="button"
+            ><i class="fab fa-facebook-f"></i
+            ></a>
+
+
+
+            <!-- Instagram -->
+            <a class="btn btn-primary btn-block" style="background-color: #ac2bac;" href="https://www.instagram.com/persontechnology/?hl=es-la" role="button"
+            ><i class="fab fa-instagram"></i
+            ></a>
+
+
+
+
+            <!-- Youtube -->
+            <a class="btn btn-primary btn-block" style="background-color: #ed302f;" href="https://www.youtube.com/channel/UCTQWC6Ms6a2G0GLNQHcjWtg" role="button"
+            ><i class="fab fa-youtube"></i
+            ></a>
+
+
+
+            <!-- Github -->
+            <a class="btn btn-primary btn-block" style="background-color: #333333;" href="https://github.com/persontechnology" role="button"
+            ><i class="fab fa-github"></i
+            ></a>
+
+           
+            <!-- Whatsapp -->
+            <a class="btn btn-info btn-block"  href="https://www.tiktok.com/@persontechnology?lang=es" role="button"
+            ><i class="fab fa-tiktok"></i></a>
+            
+
+          @livewire('estaticas.escribenos')
   
         </div>
   
