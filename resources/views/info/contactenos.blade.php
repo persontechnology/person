@@ -54,20 +54,20 @@
              <!-- Whatsapp -->
              <a class="btn btn-primary btn-block" style="background-color: #25d366;" href="https://wa.me/message/P6E77NRUVOC3A1" role="button"
              ><i class="fab fa-whatsapp"></i
-             ></a>
+             > WhatsApp</a>
             <hr>
             <p>{{ __('Siguenos en nuestras redes sociales') }}</p>
             <!-- Facebook -->
             <a class="btn btn-primary btn-block" style="background-color: #3b5998;" href="https://www.facebook.com/persontechnology" role="button"
             ><i class="fab fa-facebook-f"></i
-            ></a>
+            > Facebook</a>
 
 
 
             <!-- Instagram -->
             <a class="btn btn-primary btn-block" style="background-color: #ac2bac;" href="https://www.instagram.com/persontechnology/?hl=es-la" role="button"
             ><i class="fab fa-instagram"></i
-            ></a>
+            > Instagram</a>
 
 
 
@@ -75,19 +75,19 @@
             <!-- Youtube -->
             <a class="btn btn-primary btn-block" style="background-color: #ed302f;" href="https://www.youtube.com/channel/UCTQWC6Ms6a2G0GLNQHcjWtg" role="button"
             ><i class="fab fa-youtube"></i
-            ></a>
+            > YouTube</a>
 
 
 
             <!-- Github -->
             <a class="btn btn-primary btn-block" style="background-color: #333333;" href="https://github.com/persontechnology" role="button"
             ><i class="fab fa-github"></i
-            ></a>
+            > Github</a>
 
            
             <!-- Whatsapp -->
             <a class="btn btn-info btn-block"  href="https://www.tiktok.com/@persontechnology?lang=es" role="button"
-            ><i class="fab fa-tiktok"></i></a>
+            ><i class="fab fa-tiktok"></i> TikTok</a>
             
 
           @livewire('estaticas.escribenos')
