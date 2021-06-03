@@ -56,7 +56,7 @@
              ><i class="fab fa-whatsapp"></i
              > WhatsApp</a>
             <hr>
-            <p>{{ __('Siguenos en nuestras redes sociales') }}</p>
+            <p class="text-center">{{ __('Siguenos en nuestras redes sociales') }}</p>
             <!-- Facebook -->
             <a class="btn btn-primary btn-block" style="background-color: #3b5998;" href="https://www.facebook.com/persontechnology" role="button"
             ><i class="fab fa-facebook-f"></i
