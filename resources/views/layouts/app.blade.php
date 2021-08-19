@@ -45,7 +45,8 @@
 
     <title>{{ config('app.name','PERSON TECHNOLOGY') }}</title>
     
-    <link rel="icon" href="{{ asset('img/icon.png') }}" type="image/png" />
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -72,7 +73,15 @@
           >
             <i class="fas fa-bars"></i>
           </button>
-          <a class="navbar-brand" href="{{ url('/') }}">{{ config('app.name','PERSON TECHNOLOGY') }}</a>
+          <a class="navbar-brand" href="{{ url('/') }}">
+             <img
+                src="{{ asset('img/person.png') }}"
+                height="45"
+                class="py-0"
+                alt=""
+                loading="Person Technology"
+              />
+          </a>
           <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item {{ request()->routeIs('inicio')?'active':'' }}">

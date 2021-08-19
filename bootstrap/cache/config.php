@@ -10,7 +10,7 @@
     'locale' => 'es',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:AB51yXOsWtRN3muxKyQPlf4037gCKmekOUT+GR79WxY=',
+    'key' => 'base64:wI4lSpLg17IZ1G5iBOqDS9bJP76DiakBhTdH3XKqBNI=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -182,7 +182,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/home/deivid/workspace/person/storage/framework/cache/data',
+        'path' => 'C:\\workspace\\person\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -349,12 +349,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/home/deivid/workspace/person/storage/app',
+        'root' => 'C:\\workspace\\person\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/home/deivid/workspace/person/storage/app/public',
+        'root' => 'C:\\workspace\\person\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -371,7 +371,7 @@
     ),
     'links' => 
     array (
-      '/home/deivid/workspace/person/public/storage' => '/home/deivid/workspace/person/storage/app/public',
+      'C:\\workspace\\person\\public\\storage' => 'C:\\workspace\\person\\storage\\app/public',
     ),
   ),
   'hashing' => 
@@ -391,7 +391,7 @@
   'livewire' => 
   array (
     'class_namespace' => 'App\\Http\\Livewire',
-    'view_path' => '/home/deivid/workspace/person/resources/views/livewire',
+    'view_path' => 'C:\\workspace\\person\\resources\\views/livewire',
     'layout' => 'layouts.app',
     'asset_url' => NULL,
     'middleware_group' => 'web',
@@ -441,13 +441,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/home/deivid/workspace/person/storage/logs/laravel.log',
+        'path' => 'C:\\workspace\\person\\storage\\logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/home/deivid/workspace/person/storage/logs/laravel.log',
+        'path' => 'C:\\workspace\\person\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -497,7 +497,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/home/deivid/workspace/person/storage/logs/laravel.log',
+        'path' => 'C:\\workspace\\person\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -554,7 +554,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/home/deivid/workspace/person/resources/views/vendor/mail',
+        0 => 'C:\\workspace\\person\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -633,7 +633,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/home/deivid/workspace/person/storage/framework/sessions',
+    'files' => 'C:\\workspace\\person\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -653,13 +653,13 @@
   array (
     'paths' => 
     array (
-      0 => '/home/deivid/workspace/person/resources/views',
+      0 => 'C:\\workspace\\person\\resources\\views',
     ),
-    'compiled' => '/home/deivid/workspace/person/storage/framework/views',
+    'compiled' => 'C:\\workspace\\person\\storage\\framework\\views',
   ),
   'youtube' => 
   array (
-    'key' => 'AIzaSyBB0baRimiwwduLNTyCMl4SoU4nAFN2_Aw',
+    'key' => 'YOUR_API_KEY',
   ),
   'flare' => 
   array (
