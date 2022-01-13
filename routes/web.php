@@ -28,6 +28,9 @@ Route::get('/odoo-crm', function ($locale=null) {
 Route::get('/nuestros-clientes', function ($locale=null) {
     return view('info.clientes');
 })->name('clientes');
+Route::get('/rastreo-gps', function ($locale=null) {
+    return view('info.rastreo-gps');
+})->name('rastreoGps');
 Route::get('/contactenos', function ($locale=null) {
     return view('info.contactenos');
 })->name('contactenos');

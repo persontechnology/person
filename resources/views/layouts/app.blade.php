@@ -43,7 +43,12 @@
     <meta name="DC.Description" content="{{ __('Somos una empresa ecuatoriana que diseña y produce equipos electrónicos, software y servicios en línea.') }}">
 
 
-    <title>{{ config('app.name','PERSON TECHNOLOGY') }}</title>
+    <title>
+      @isset($title)
+       {{ $title }} | 
+      @endisset
+      {{ config('app.name','PERSON TECHNOLOGY') }}
+    </title>
     
     <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
     <link rel="icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
@@ -111,6 +116,9 @@
               </li> --}}
               <li class="nav-item {{ request()->routeIs('odoo')?'active':'' }}">
                 <a class="nav-link {{ request()->routeIs('odoo')?'active':'' }}" href="{{ route('odoo') }}">Odoo</a>
+              </li>
+              <li class="nav-item {{ request()->routeIs('rastreoGps')?'active':'' }}">
+                <a class="nav-link {{ request()->routeIs('rastreoGps')?'active':'' }}" aria-current="page" href="{{ route('rastreoGps') }}">{{ __('Rastreo GPS') }}</a>
               </li>
               <li class="nav-item {{ request()->routeIs('clientes')?'active':'' }}">
                 <a class="nav-link {{ request()->routeIs('clientes')?'active':'' }}" aria-current="page" href="{{ route('clientes') }}">{{ __('Nuestros clientes') }}</a>

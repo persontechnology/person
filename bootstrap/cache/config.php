@@ -10,7 +10,7 @@
     'locale' => 'es',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:wI4lSpLg17IZ1G5iBOqDS9bJP76DiakBhTdH3XKqBNI=',
+    'key' => 'base64:X9+/hxd11ZOwUWqcfyvxTT3X8N3Miu2spdECA4J+RHo=',
     'cipher' => 'AES-256-CBC',
     'providers' => 
     array (
@@ -182,7 +182,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'C:\\workspace\\person\\storage\\framework/cache/data',
+        'path' => '/home/deivid/workspace/person/storage/framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -349,12 +349,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\workspace\\person\\storage\\app',
+        'root' => '/home/deivid/workspace/person/storage/app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'C:\\workspace\\person\\storage\\app/public',
+        'root' => '/home/deivid/workspace/person/storage/app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -371,7 +371,7 @@
     ),
     'links' => 
     array (
-      'C:\\workspace\\person\\public\\storage' => 'C:\\workspace\\person\\storage\\app/public',
+      '/home/deivid/workspace/person/public/storage' => '/home/deivid/workspace/person/storage/app/public',
     ),
   ),
   'hashing' => 
@@ -391,9 +391,10 @@
   'livewire' => 
   array (
     'class_namespace' => 'App\\Http\\Livewire',
-    'view_path' => 'C:\\workspace\\person\\resources\\views/livewire',
+    'view_path' => '/home/deivid/workspace/person/resources/views/livewire',
     'layout' => 'layouts.app',
     'asset_url' => NULL,
+    'app_url' => NULL,
     'middleware_group' => 'web',
     'temporary_file_upload' => 
     array (
@@ -423,6 +424,8 @@
       'max_upload_time' => 5,
     ),
     'manifest_path' => NULL,
+    'back_button_cache' => false,
+    'render_on_redirect' => false,
   ),
   'logging' => 
   array (
@@ -441,13 +444,13 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'C:\\workspace\\person\\storage\\logs/laravel.log',
+        'path' => '/home/deivid/workspace/person/storage/logs/laravel.log',
         'level' => 'debug',
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'C:\\workspace\\person\\storage\\logs/laravel.log',
+        'path' => '/home/deivid/workspace/person/storage/logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
       ),
@@ -497,7 +500,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'C:\\workspace\\person\\storage\\logs/laravel.log',
+        'path' => '/home/deivid/workspace/person/storage/logs/laravel.log',
       ),
     ),
   ),
@@ -554,7 +557,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'C:\\workspace\\person\\resources\\views/vendor/mail',
+        0 => '/home/deivid/workspace/person/resources/views/vendor/mail',
       ),
     ),
   ),
@@ -633,7 +636,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'C:\\workspace\\person\\storage\\framework/sessions',
+    'files' => '/home/deivid/workspace/person/storage/framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -653,9 +656,9 @@
   array (
     'paths' => 
     array (
-      0 => 'C:\\workspace\\person\\resources\\views',
+      0 => '/home/deivid/workspace/person/resources/views',
     ),
-    'compiled' => 'C:\\workspace\\person\\storage\\framework\\views',
+    'compiled' => '/home/deivid/workspace/person/storage/framework/views',
   ),
   'youtube' => 
   array (

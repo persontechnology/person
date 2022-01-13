@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('layouts.app',['title'=>'Nuestros clientes'])
 @section('contenido')
 
 @include('info.frase-clientes')

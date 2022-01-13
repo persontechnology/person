@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app',['title'=>'Odoo CRM'])
 @section('contenido')
 
 <div class="bg-image my-5">
