@@ -115,7 +115,7 @@
                 </ul>
               </li> --}}
               <li class="nav-item {{ request()->routeIs('odoo')?'active':'' }}">
-                <a class="nav-link {{ request()->routeIs('odoo')?'active':'' }}" href="{{ route('odoo') }}">Odoo</a>
+                <a class="nav-link {{ request()->routeIs('odoo')?'active':'' }}" href="{{ route('odoo') }}">Odoo CRM</a>
               </li>
               <li class="nav-item {{ request()->routeIs('rastreoGps')?'active':'' }}">
                 <a class="nav-link {{ request()->routeIs('rastreoGps')?'active':'' }}" aria-current="page" href="{{ route('rastreoGps') }}">{{ __('Rastreo GPS') }}</a>
